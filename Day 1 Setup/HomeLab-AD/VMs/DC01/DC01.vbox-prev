@@ -45,6 +45,17 @@
       </USB>
       <Network>
         <Adapter slot="0" enabled="true" MACAddress="08002774E58A" type="82540EM">
+          <DisabledModes>
+            <InternalNetwork name="intnet"/>
+            <NATNetwork name="NatNetwork"/>
+          </DisabledModes>
+          <HostOnlyInterface name="VirtualBox Host-Only Ethernet Adapter"/>
+        </Adapter>
+        <Adapter slot="1" enabled="true" MACAddress="0800272008B5" type="82540EM">
+          <DisabledModes>
+            <InternalNetwork name="intnet"/>
+            <NATNetwork name="NatNetwork"/>
+          </DisabledModes>
           <NAT/>
         </Adapter>
       </Network>
