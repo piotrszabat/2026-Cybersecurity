@@ -22,3 +22,6 @@ Day 1 Setup/HomeLab-AD/VMs/PC01/Logs/VBox.log.1
 *.log
 Day 1 Setup/HomeLab-AD/VMs/PC01/PC01.vdi
 Day 1 Setup/HomeLab-AD/VMs/PC01/PC01.vbox
+/Day 1 Setup
+*.vbox
+Day 1 Setup/HomeLab-AD/VMs/DC01/DC01.vdi
