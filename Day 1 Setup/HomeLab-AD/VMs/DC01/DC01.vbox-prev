@@ -6,24 +6,24 @@
 ** Use VBoxManage or the VirtualBox Manager GUI to make changes.
 -->
 <VirtualBox xmlns="http://www.virtualbox.org/" version="1.19-windows">
-  <Machine uuid="{728aed2d-78e1-4bde-9a2d-3bfc3ab8d84e}" name="DC01" OSType="Windows2022_64" snapshotFolder="Snapshots" lastStateChange="2026-02-16T19:17:05Z">
+  <Machine uuid="{37c0ade6-3327-4ec5-9f26-513f1d5a8f21}" name="DC01" OSType="Windows2022_64" snapshotFolder="Snapshots" lastStateChange="2026-02-16T21:19:21Z">
     <MediaRegistry>
       <HardDisks>
-        <HardDisk uuid="{9aac4062-8731-44cc-86e0-644d825e2411}" location="DC01.vdi" format="VDI" type="Normal"/>
+        <HardDisk uuid="{51e5a875-ff83-4661-a4c6-fcff34909105}" location="DC01.vdi" format="VDI" type="Normal"/>
       </HardDisks>
       <DVDImages>
         <Image uuid="{d9e218e4-a8c6-4b17-9fc0-29be0d550c32}" location="C:/Users/44771/Desktop/Cybersecurity/2026-Cybersecurity/Day 1 Setup/HomeLab-AD/ISO/SERVER_EVAL_x64FRE_en-us.iso"/>
       </DVDImages>
       <FloppyImages>
-        <Image uuid="{8df128d7-d384-4bdc-a56b-4909c4e4d233}" location="Unattended-728aed2d-78e1-4bde-9a2d-3bfc3ab8d84e-aux-floppy.img"/>
+        <Image uuid="{2837aed0-13cf-4942-b880-79dde2f44e6e}" location="Unattended-37c0ade6-3327-4ec5-9f26-513f1d5a8f21-aux-floppy.img"/>
       </FloppyImages>
     </MediaRegistry>
     <ExtraData>
       <ExtraDataItem name="GUI/LastCloseAction" value="PowerOff"/>
-      <ExtraDataItem name="GUI/LastNormalWindowPosition" value="2560,239,1023,810"/>
+      <ExtraDataItem name="GUI/LastNormalWindowPosition" value="2104,62,1024,811"/>
     </ExtraData>
     <Hardware>
-      <Memory RAMSize="4096"/>
+      <Memory RAMSize="8192"/>
       <HID Pointing="USBTablet"/>
       <Boot>
         <Order position="1" device="HardDisk"/>
@@ -44,30 +44,19 @@
         </Controllers>
       </USB>
       <Network>
-        <Adapter slot="0" enabled="true" MACAddress="08002774E58A" type="82540EM">
-          <DisabledModes>
-            <InternalNetwork name="intnet"/>
-            <NATNetwork name="NatNetwork"/>
-          </DisabledModes>
-          <HostOnlyInterface name="VirtualBox Host-Only Ethernet Adapter"/>
-        </Adapter>
-        <Adapter slot="1" enabled="true" MACAddress="0800272008B5" type="82540EM">
-          <DisabledModes>
-            <InternalNetwork name="intnet"/>
-            <NATNetwork name="NatNetwork"/>
-          </DisabledModes>
+        <Adapter slot="0" enabled="true" MACAddress="080027A63AF6" type="82540EM">
           <NAT/>
         </Adapter>
       </Network>
       <AudioAdapter controller="HDA" useDefault="true" driver="WAS" enabled="true" enabledOut="true"/>
       <Clipboard/>
       <GuestProperties>
-        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="en_US" timestamp="1771269425699031700" flags="RDONLYGUEST"/>
+        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="en_US" timestamp="1771276392972993700" flags="RDONLYGUEST"/>
       </GuestProperties>
       <StorageControllers>
         <StorageController name="SATA" type="AHCI" PortCount="2" useHostIOCache="false" Bootable="true" IDE0MasterEmulationPort="0" IDE0SlaveEmulationPort="1" IDE1MasterEmulationPort="2" IDE1SlaveEmulationPort="3">
           <AttachedDevice type="HardDisk" hotpluggable="false" port="0" device="0">
-            <Image uuid="{9aac4062-8731-44cc-86e0-644d825e2411}"/>
+            <Image uuid="{51e5a875-ff83-4661-a4c6-fcff34909105}"/>
           </AttachedDevice>
           <AttachedDevice passthrough="false" type="DVD" hotpluggable="false" port="1" device="0">
             <Image uuid="{d9e218e4-a8c6-4b17-9fc0-29be0d550c32}"/>
@@ -75,7 +64,7 @@
         </StorageController>
         <StorageController name="Floppy" type="I82078" PortCount="1" useHostIOCache="true" Bootable="true">
           <AttachedDevice type="Floppy" hotpluggable="false" port="0" device="0">
-            <Image uuid="{8df128d7-d384-4bdc-a56b-4909c4e4d233}"/>
+            <Image uuid="{2837aed0-13cf-4942-b880-79dde2f44e6e}"/>
           </AttachedDevice>
         </StorageController>
       </StorageControllers>

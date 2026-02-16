@@ -6,3 +6,19 @@ Day 1 Setup/HomeLab-AD/VMs/PC01/Unattended-78803820-c540-4cbc-a775-692eb3b4eec0-
 Day 1 Setup/HomeLab-AD/VMs/PC01/Unattended-78803820-c540-4cbc-a775-692eb3b4eec0-aux-iso.viso
 Day 1 Setup/HomeLab-AD/VMs/PC01/Unattended-78803820-c540-4cbc-a775-692eb3b4eec0-autounattend.xml
 Day 1 Setup/HomeLab-AD/Docs/Day 1 Checklist.rtf
+Day 1 Setup/HomeLab-AD/VMs/PC01/Unattended-42fa7720-a9d1-4eca-9165-ea339759ed30-VBOXPOST.CMD
+Day 1 Setup/HomeLab-AD/VMs/PC01/Unattended-42fa7720-a9d1-4eca-9165-ea339759ed30-autounattend.xml
+Day 1 Setup/HomeLab-AD/VMs/PC01/Unattended-42fa7720-a9d1-4eca-9165-ea339759ed30-aux-iso.viso
+Day 1 Setup/HomeLab-AD/VMs/PC01/PC01.vdi
+Day 1 Setup/HomeLab-AD/VMs/PC01/PC01.vbox-prev
+Day 1 Setup/HomeLab-AD/VMs/PC01/PC01.vbox
+Day 1 Setup/HomeLab-AD/VMs/PC01/Unattended-78803820-c540-4cbc-a775-692eb3b4eec0-aux-iso.viso
+Day 1 Setup/HomeLab-AD/VMs/PC01/Unattended-78803820-c540-4cbc-a775-692eb3b4eec0-autounattend.xml
+Day 1 Setup/HomeLab-AD/VMs/PC01/Logs/VBox.log.1
+*.3
+*.2
+*.img
+*.1
+*.log
+Day 1 Setup/HomeLab-AD/VMs/PC01/PC01.vdi
+Day 1 Setup/HomeLab-AD/VMs/PC01/PC01.vbox
