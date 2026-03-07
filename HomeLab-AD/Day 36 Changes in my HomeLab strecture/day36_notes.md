@@ -1,0 +1,1 @@
+Day 36 of my IDS01 strecture changed, i will install Suricata on fpSense for better operation of my homelab.
