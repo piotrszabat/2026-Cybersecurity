@@ -1,0 +1,6 @@
+detection_name,category,technique,enabled,status,notes
+Multiple Failed Login Attempts,Authentication Abuse,T1110,Yes,Implemented,Splunk correlation rule
+PowerShell Suspicious Activity,Execution,T1059.001,Yes,Implemented,PowerShell detection in Splunk
+Admin Account Creation,Persistence / Privilege Escalation,T1136,Yes,Implemented,Account creation monitoring
+Threat Intel Matched Authentication Activity,Threat Intelligence,T1110,Yes,Implemented,TI-enriched auth detection
+Lateral Movement Activity,Lateral Movement,T1021,Yes,Implemented,Validated during Day 54

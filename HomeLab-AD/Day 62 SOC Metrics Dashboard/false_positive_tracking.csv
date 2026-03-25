@@ -1,0 +1,5 @@
+alert_name,date,classification,severity,host,notes
+Multiple Failed Login Attempts,2026-03-01,False Positive,Medium,PC01,Lab testing activity
+PowerShell Suspicious Activity,2026-03-02,True Positive,High,PC01,Encoded PowerShell execution
+Threat Intel Matched Authentication Activity,2026-03-03,False Positive,Medium,SRV01,Matched test IOC in lab
+Admin Account Creation,2026-03-04,Benign,Medium,DC01,Expected admin test
