@@ -1,66 +1,269 @@
-This repository documents my structured journey into IT Support and Cybersecurity, with a clear goal of becoming job ready for entry level IT roles in the UK.
+# SOC Detection Lab
 
-I am building practical experience through hands on home labs, structured learning, and real world troubleshooting simulations.
-This is not theory based learning. Every section reflects implementation, validation, and documentation.
+Enterprise-style SOC homelab designed to simulate a realistic **Blue Team** and **Detection Engineering** environment.
 
-Professional Objective
-My goal is to transition into IT Support and progressively grow into Cybersecurity.
+---
 
-To achieve this, I am actively developing skills in:
-• Windows Server and Active Directory
-• Networking fundamentals
-• Structured troubleshooting methodology
-• Documentation and ticket handling
-• PowerShell fundamentals
-• Core security concepts
+## 📌 Project Overview
 
-Current Focus
-Active Directory Home Lab
-I built a Windows Server lab environment to simulate a real business infrastructure.
+This homelab was created to develop practical skills for a **SOC Analyst / Security Engineer** career path through hands-on experience in:
 
-The environment includes:
-• Domain Controller using Active Directory Domain Services
-• Domain joined Windows client machine
-• DNS and DHCP configuration
-• Group Policy implementation and validation
-• User and security group administration
-• Ticket simulation and troubleshooting scenarios
-All configurations, validation steps, and issue resolution notes are documented in this repository.
+* Active Directory administration
+* Windows endpoint telemetry
+* SIEM engineering and log analysis
+* IDS monitoring and network investigation
+* Detection engineering
+* Threat hunting
+* Incident response
+* Security architecture documentation
 
-Repository Structure
-This repository is organised into structured learning phases and practical implementations.
+The lab evolved from a flat internal network into a **segmented, enterprise-style environment** with dedicated:
 
-Main sections include:
-• 12 Months Plan of Experience
-• HomeLab AD
-• Troubleshooting Tickets
-• Screenshots
-• Technical Documentation
-Each section reflects hands on work and documented outcomes.
+* Corporate network
+* Perimeter network
+* SOC monitoring zone
 
-Skills Being Developed
-Through this project I am strengthening my abilities in:
-• Active Directory administration
-• DNS and DHCP management
-• Group Policy configuration
-• User lifecycle management
-• Service Desk ticket documentation
-• Windows system troubleshooting
-• Basic PowerShell usage in support scenarios
+---
 
-Purpose of This Repository
-I created this repository to demonstrate:
-• Practical technical skills
-• Structured and disciplined learning
-• Professional documentation standards
-• Continuous development and improvement
+## 🎯 Lab Goals
 
-As someone transitioning into IT within the UK market, this repository serves as proof of work and commitment to professional growth.
+The main objectives of this project are:
 
-Next Steps
-My upcoming development plan includes:
+* Build a realistic SOC environment
+* Collect and analyze endpoint and network telemetry
+* Create and tune detections in **Splunk**, **Wazuh**, and **Suricata**
+* Investigate simulated attacks
+* Document architecture, detections, hunting activities, and response workflows
+* Build a portfolio of practical Blue Team work
 
-• Expanding into Microsoft 365 and Entra ID
-• Introducing networking focused lab environments
-• Beginning security focused practical labs
-• Preparing for entry level IT Support roles
+---
+
+## 🏗️ Final Lab Architecture
+
+### 🔧 Core Systems
+
+* **FW01** — pfSense firewall (network perimeter)
+* **DC01** — Windows Server 2022 domain controller
+* **PC01** — Windows 11 workstation
+* **KALI01** — attacker simulation machine
+* **SPLK01** — Splunk SIEM
+* **WAZ01** — Wazuh detection platform
+* **VAS01** — OpenVAS / Greenbone vulnerability scanner
+
+---
+
+### 🌐 Network Segments
+
+* **NET-EXT** — External / attacker network
+* **NET-CORP** — Corporate network
+* **NET-SOC** — Monitoring and security tooling network
+
+---
+
+### 🛡️ Security Tooling
+
+* **pfSense** — firewalling and segmentation
+* **Suricata** — IDS monitoring
+* **Splunk** — SIEM ingestion, dashboards, and correlation
+* **Wazuh** — endpoint monitoring and detection
+* **Sysmon** — Windows telemetry collection
+* **Wireshark** — packet inspection
+* **OpenVAS** — vulnerability management
+
+---
+
+## 🔄 Architecture Evolution
+
+This lab was built in structured stages:
+
+1. Base virtual environment setup
+2. Active Directory and Windows fundamentals
+3. Telemetry and visibility implementation
+4. Initial detection engineering in Splunk
+5. Network investigation and IDS exposure
+6. Enterprise architecture redesign (segmentation)
+7. Perimeter monitoring with pfSense and Suricata
+8. Endpoint detection with Wazuh
+9. SIEM correlation and dashboards
+10. Threat hunting, case studies, and SOC workflows
+
+---
+
+## 📁 Repository Structure
+
+```
+SOC-Detection-Lab/
+├── Architecture/
+├── Assets/
+├── Case Studies/
+├── Detections/
+├── Docs/
+├── Playbooks/
+├── Threat Hunting/
+├── Tools/
+└── README.md
+```
+
+### 📂 Folder Description
+
+* **Architecture/**
+  Network diagrams, IP addressing plans, segmentation, and architecture documentation
+
+* **Assets/**
+  Screenshots, diagrams, dashboards, and visual materials
+
+* **Case Studies/**
+  Detailed investigations of simulated attacks and incident response scenarios
+
+* **Detections/**
+  Detection logic, correlation rules, tuning, MITRE ATT&CK mapping, and dashboards
+
+* **Docs/**
+  Lab setup, telemetry pipelines, integrations, and implementation details
+
+* **Playbooks/**
+  SOC workflows: triage, incident response, and operational procedures
+
+* **Threat Hunting/**
+  Hypothesis-driven hunts, IOC searches, and investigation reports
+
+* **Tools/**
+  Helper scripts, utilities, and reusable lab commands
+
+---
+
+## ⚙️ Implemented Capabilities
+
+### 🖥️ Endpoint Telemetry
+
+* Windows Event Log collection
+* Sysmon deployment and monitoring
+* Wazuh agent deployment
+* File integrity monitoring
+* PowerShell and process execution visibility
+
+---
+
+### 📊 SIEM & Detection Engineering
+
+* Splunk log ingestion (Windows + security tools)
+* Correlation rules for:
+
+  * Authentication events
+  * PowerShell activity
+  * Account creation
+* Detection tuning and validation
+* Dashboard creation (alerts + monitoring)
+* MITRE ATT&CK mapping
+
+---
+
+### 🌐 Network Visibility
+
+* Suricata IDS deployment
+* pfSense perimeter monitoring
+* Wireshark packet analysis
+* PCAP investigation
+* DNS tunneling detection testing
+* Nmap reconnaissance simulation
+
+---
+
+### 🚨 Security Operations
+
+* Alert triage workflows
+* Incident timeline reconstruction
+* Ransomware simulation
+* Threat intelligence integration
+* IOC-based hunting
+* Vulnerability scanning (OpenVAS)
+
+---
+
+## 🔍 Example Detection Areas
+
+This project includes detection logic for:
+
+* Failed login attempts
+* Brute-force activity
+* Admin account creation
+* Suspicious PowerShell execution
+* Suspicious process execution
+* Lateral movement
+* Credential-based attacks
+* Suricata alert analysis
+* Wazuh custom rule development
+* Endpoint and SIEM correlation
+
+---
+
+## 🧪 Example Case Studies
+
+* External reconnaissance from Kali against perimeter systems
+* PCAP analysis and network investigation
+* Credential attack simulation
+* Lateral movement analysis
+* Ransomware simulation
+* Incident response reporting
+
+---
+
+## 🧠 Key Learning Outcomes
+
+Through this project, I gained hands-on experience in:
+
+* Designing and documenting a segmented SOC environment
+* Deploying and integrating Blue Team tooling
+* Building detections from real telemetry
+* Correlating logs across multiple sources
+* Investigating attacks from initial access to execution
+* Creating portfolio-ready security documentation
+
+---
+
+## 📈 Current Status
+
+✅ Completed through **Day 66** of the SOC homelab roadmap
+
+### ✔️ Major Milestones
+
+* Active Directory and Windows lab setup
+* Telemetry and visibility implementation
+* Initial Splunk detections
+* Network attack investigation labs
+* Enterprise architecture redesign
+* pfSense and Suricata integration
+* Wazuh deployment and monitoring
+* SIEM dashboards and correlation
+* SOC playbooks and documentation
+
+---
+
+## 🚀 Planned Next Steps
+
+* Advanced detection engineering workflows
+* Sigma-style rule standardization
+* Expanded threat hunting scenarios
+* Linux telemetry integration
+* Phishing and email-based detections
+* Cloud security (Microsoft Sentinel) integration
+
+---
+
+## 🖼️ Screenshots & Diagrams
+
+All screenshots and diagrams are stored in the **Assets/** directory and referenced throughout the documentation.
+
+---
+
+## ⚠️ Disclaimer
+
+This lab is intended for **educational purposes only**.
+All attack simulations were performed in a fully isolated lab environment.
+
+---
+
+## 👤 Author
+
+**Piotr Szabat**
+SOC Detection Lab — Blue Team Portfolio Project
