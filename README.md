@@ -1,66 +1,86 @@
-This repository documents my structured journey into IT Support and Cybersecurity, with a clear goal of becoming job ready for entry level IT roles in the UK.
+# SOC Detection Lab
 
-I am building practical experience through hands on home labs, structured learning, and real world troubleshooting simulations.
-This is not theory based learning. Every section reflects implementation, validation, and documentation.
+Enterprise-style SOC homelab built to simulate a realistic blue team and detection engineering environment.
 
-Professional Objective
-My goal is to transition into IT Support and progressively grow into Cybersecurity.
+## Project Overview
 
-To achieve this, I am actively developing skills in:
-• Windows Server and Active Directory
-• Networking fundamentals
-• Structured troubleshooting methodology
-• Documentation and ticket handling
-• PowerShell fundamentals
-• Core security concepts
+This homelab was created to develop practical skills for a SOC Analyst / Security Engineer path through hands-on work in:
 
-Current Focus
-Active Directory Home Lab
-I built a Windows Server lab environment to simulate a real business infrastructure.
+- Active Directory administration
+- Windows endpoint telemetry
+- SIEM engineering and log analysis
+- IDS monitoring and network investigation
+- Detection engineering
+- Threat hunting
+- Incident response
+- Security architecture documentation
 
-The environment includes:
-• Domain Controller using Active Directory Domain Services
-• Domain joined Windows client machine
-• DNS and DHCP configuration
-• Group Policy implementation and validation
-• User and security group administration
-• Ticket simulation and troubleshooting scenarios
-All configurations, validation steps, and issue resolution notes are documented in this repository.
+The lab evolved from a flat internal network into a segmented enterprise-style environment with dedicated corporate, perimeter, and SOC monitoring zones.
 
-Repository Structure
-This repository is organised into structured learning phases and practical implementations.
+## Lab Goals
 
-Main sections include:
-• 12 Months Plan of Experience
-• HomeLab AD
-• Troubleshooting Tickets
-• Screenshots
-• Technical Documentation
-Each section reflects hands on work and documented outcomes.
+The main goals of this project are:
 
-Skills Being Developed
-Through this project I am strengthening my abilities in:
-• Active Directory administration
-• DNS and DHCP management
-• Group Policy configuration
-• User lifecycle management
-• Service Desk ticket documentation
-• Windows system troubleshooting
-• Basic PowerShell usage in support scenarios
+- build a realistic SOC environment
+- collect and analyze endpoint and network telemetry
+- create and tune detections in Splunk, Wazuh, and Suricata
+- investigate simulated attacks
+- document architecture, detections, hunts, and response workflows
+- create a portfolio of practical blue team work
 
-Purpose of This Repository
-I created this repository to demonstrate:
-• Practical technical skills
-• Structured and disciplined learning
-• Professional documentation standards
-• Continuous development and improvement
+## Final Lab Architecture
 
-As someone transitioning into IT within the UK market, this repository serves as proof of work and commitment to professional growth.
+### Core Systems
 
-Next Steps
-My upcoming development plan includes:
+- **FW01** — pfSense firewall and network perimeter
+- **DC01** — Windows Server 2022 domain controller
+- **PC01** — Windows 11 workstation
+- **KALI01** — attacker simulation box
+- **SPLK01** — Splunk SIEM
+- **WAZ01** — Wazuh detection platform
+- **VAS01** — OpenVAS / Greenbone vulnerability scanner
 
-• Expanding into Microsoft 365 and Entra ID
-• Introducing networking focused lab environments
-• Beginning security focused practical labs
-• Preparing for entry level IT Support roles
+### Network Segments
+
+- **NET-EXT** — external / attacker zone
+- **NET-INT** — internal network
+- **NET-SOC** — monitoring and security tooling network
+
+### Security Tooling
+
+- **pfSense** for firewalling and segmentation
+- **Suricata** for IDS monitoring
+- **Splunk** for SIEM ingestion, dashboards, and correlation
+- **Wazuh** for endpoint monitoring and detections
+- **Sysmon** for Windows telemetry
+- **Wireshark** for packet inspection
+- **OpenVAS** for vulnerability management
+
+## Architecture Evolution
+
+This lab was built in stages:
+
+1. Base virtual environment setup
+2. Active Directory and Windows administration fundamentals
+3. Telemetry and visibility setup
+4. Initial detection engineering in Splunk
+5. Network investigation and IDS exposure
+6. Enterprise architecture redesign with segmented networks
+7. Perimeter monitoring with pfSense and Suricata
+8. Endpoint detection with Wazuh
+9. SIEM correlation and dashboards
+10. Threat hunting, case studies, and SOC workflows
+
+## Repository Structure
+
+```text
+SOC-Detection-Lab/
+├── Architecture/
+├── Assets/
+├── Case Studies/
+├── Detections/
+├── Docs/
+├── Playbooks/
+├── Threat Hunting/
+├── Tools/
+└── README.md
