@@ -55,7 +55,7 @@ The main objectives of this project are:
 ### 🌐 Network Segments
 
 * **NET-EXT** — External / attacker network
-* **NET-CORP** — Corporate network
+* **NET-INT** — Internal network
 * **NET-SOC** — Monitoring and security tooling network
 
 ---
