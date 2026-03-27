@@ -43,7 +43,7 @@ The main goals of this project are:
 ### Network Segments
 
 - **NET-EXT** — external / attacker zone
-- **NET-INT** — internal network
+- **NET-CORP** — corporate network
 - **NET-SOC** — monitoring and security tooling network
 
 ### Security Tooling
@@ -73,7 +73,6 @@ This lab was built in stages:
 
 ## Repository Structure
 
-```text
 SOC-Detection-Lab/
 ├── Architecture/
 ├── Assets/
@@ -84,3 +83,118 @@ SOC-Detection-Lab/
 ├── Threat Hunting/
 ├── Tools/
 └── README.md
+Folder Description
+Architecture/
+Network diagrams, IP plans, segmentation, and architecture documentation.
+Assets/
+Screenshots, diagrams, dashboards, and supporting images used across the repository.
+Case Studies/
+Detailed investigations of attack simulations and incident response exercises.
+Detections/
+Detection logic, correlation rules, rule tuning, MITRE mapping, and dashboard notes across Splunk, Wazuh, and Suricata.
+Docs/
+Lab setup documentation, telemetry pipeline notes, integrations, and implementation details.
+Playbooks/
+SOC workflows such as triage, incident response, and operational procedures.
+Threat Hunting/
+Hypothesis-driven hunts, IOC searches, and endpoint/network hunting investigations.
+Tools/
+Helper scripts, validation utilities, and reusable lab commands.
+Implemented Capabilities
+Endpoint Telemetry
+Windows Event Log collection
+Sysmon deployment and monitoring
+Wazuh agent deployment
+File integrity monitoring
+PowerShell and process execution visibility
+SIEM and Detection Engineering
+Splunk log ingestion from Windows and security tools
+Correlation rules for authentication, PowerShell, and account creation
+Detection tuning and validation
+Dashboard creation for alerts and endpoint monitoring
+MITRE ATT&CK mapping
+Network Visibility
+Suricata IDS deployment
+pfSense perimeter monitoring
+Wireshark packet analysis
+PCAP investigation
+DNS tunneling awareness testing
+Nmap and reconnaissance simulation
+Security Operations
+Alert triage workflow
+Incident investigation timeline building
+Ransomware simulation
+Threat intelligence integration
+IOC hunting
+Vulnerability scanning with OpenVAS
+Example Detection Areas
+
+This project currently includes work in the following detection areas:
+
+failed login detection
+brute force detection
+admin account creation detection
+suspicious PowerShell execution
+suspicious process execution
+lateral movement activity
+credential attack detection
+Suricata alert analysis
+Wazuh custom rule development
+endpoint and SIEM correlation logic
+Example Case Studies
+
+The lab includes practical security investigations such as:
+
+external reconnaissance from Kali against perimeter systems
+PCAP investigation and network analysis
+credential attack simulation
+lateral movement investigation
+ransomware simulation
+incident response reporting
+Key Learning Outcomes
+
+Through this project I developed hands-on experience in:
+
+designing and documenting a segmented SOC lab
+deploying and integrating blue team tooling
+building detections from real telemetry
+correlating logs across multiple sources
+investigating attacks from initial access through execution
+turning lab exercises into portfolio-ready documentation
+Current Status
+
+Completed through Day 66 of the SOC homelab roadmap.
+
+Major completed milestones include:
+
+base AD and Windows lab setup
+telemetry and visibility implementation
+initial Splunk detections
+network attack investigation labs
+enterprise architecture redesign
+pfSense and Suricata integration
+Wazuh deployment and endpoint monitoring
+SIEM dashboards and correlation
+SOC playbooks and portfolio documentation
+Planned Next Steps
+
+Planned future improvements include:
+
+deeper detection engineering workflows
+additional Sigma-style rule standardization
+extended threat hunting content
+Linux telemetry coverage
+phishing / email-based detections
+cloud security and Microsoft Sentinel integration
+Screenshots and Diagrams
+
+Repository screenshots and diagrams are stored in the Assets/ directory and referenced throughout the documentation.
+
+Disclaimer
+
+This lab is intended for educational purposes only.
+All attack simulations and detection tests were performed in an isolated personal lab environment.
+
+Author
+
+Built and documented by Piotr Szabat as part of a long-term SOC Analyst / Security Engineer portfolio project.
