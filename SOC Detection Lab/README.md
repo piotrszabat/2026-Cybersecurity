@@ -73,6 +73,7 @@ This lab was built in stages:
 
 ## Repository Structure
 
+```
 SOC-Detection-Lab/
 ├── Architecture/
 ├── Assets/
@@ -83,6 +84,8 @@ SOC-Detection-Lab/
 ├── Threat Hunting/
 ├── Tools/
 └── README.md
+```
+
 Folder Description
 Architecture/
 Network diagrams, IP plans, segmentation, and architecture documentation.
@@ -179,22 +182,19 @@ SOC playbooks and portfolio documentation
 Planned Next Steps
 
 Planned future improvements include:
-
-deeper detection engineering workflows
-additional Sigma-style rule standardization
-extended threat hunting content
-Linux telemetry coverage
-phishing / email-based detections
-cloud security and Microsoft Sentinel integration
+- deeper detection engineering workflows
+- additional Sigma-style rule standardization
+- extended threat hunting content
+- Linux telemetry coverage
+- phishing / email-based detections
+- cloud security and Microsoft Sentinel integration
+- 
 Screenshots and Diagrams
-
 Repository screenshots and diagrams are stored in the Assets/ directory and referenced throughout the documentation.
 
 Disclaimer
-
 This lab is intended for educational purposes only.
 All attack simulations and detection tests were performed in an isolated personal lab environment.
 
 Author
-
 Built and documented by Piotr Szabat as part of a long-term SOC Analyst / Security Engineer portfolio project.
