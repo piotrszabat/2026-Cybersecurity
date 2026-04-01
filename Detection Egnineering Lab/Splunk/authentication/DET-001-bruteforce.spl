@@ -1,0 +1,9 @@
+Title: Multiple Failed Login Attempts
+ID: DET-001
+Category: Authentication
+Platform: Splunk
+ATT&CK: T1110
+
+index="wazuh-alerts" ("4625" OR "failed" OR "authentication")
+| stats count by agent.name src_ip data.win.eventdata.targetUserName
+| where count > 5

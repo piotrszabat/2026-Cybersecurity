@@ -1,0 +1,17 @@
+title: Multiple Failed Login Attempts
+id: DET-001
+status: experimental
+description: Detects repeated failed logon attempts that may indicate brute force activity.
+logsource:
+  product: windows
+detection:
+  selection:
+    EventID: 4625
+  condition: selection
+fields:
+  - TargetUserName
+  - IpAddress
+level: medium
+tags:
+  - attack.credential_access
+  - attack.t1110
